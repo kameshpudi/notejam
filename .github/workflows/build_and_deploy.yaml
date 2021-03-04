@@ -24,7 +24,7 @@ jobs:
     - name: Setup Python version
       uses: actions/setup-python@v2
       with:
-        python-version: 2.7
+        python-version: 3.8
 
     - name: Create and start virtual environment
       run: |
@@ -34,6 +34,9 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
+    - name: Run tests
+      run: python manage.py test
+    
     - name: Upload artifact for deployment jobs
       uses: actions/upload-artifact@v2
       with:
@@ -82,7 +85,7 @@ jobs:
         uses: azure/appservice-build@v2
         with:
           platform: python
-          platform-version: '2.7'
+          platform-version: '3.8'
 
       - name: Deploy to App Service
         uses: azure/webapps-deploy@v2
