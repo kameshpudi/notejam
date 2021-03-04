@@ -7,6 +7,7 @@ class Pad(models.Model):
     user = models.ForeignKey(
         User,     
         on_delete = models.CASCADE,
+        limit_choices_to={'is_user': True},
     )
 
     def __unicode__(self):
