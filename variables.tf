@@ -21,7 +21,7 @@ variable "admin_pwd" {
 }
 variable "db_name" {
   type    = string
-  default = "syncdb"
+  default = "notejam"
 }
 variable "app_plan" {
   type    = string
