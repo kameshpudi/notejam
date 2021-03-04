@@ -5,7 +5,7 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "RG-DEVOPS-WIPRO"
+    resource_group_name  = "NOTEJAM-DEMO-RG1"
     storage_account_name = "kkterraformrmstate"
     container_name       = "terraform-state"
     key                  = "njterraform.tfstate"
