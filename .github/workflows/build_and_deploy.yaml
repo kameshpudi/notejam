@@ -24,7 +24,7 @@ jobs:
     - name: Setup Python version
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 2.7
 
     - name: Create and start virtual environment
       run: |
@@ -88,7 +88,7 @@ jobs:
         uses: azure/appservice-build@v2
         with:
           platform: python
-          platform-version: '3.8'
+          platform-version: '2.7'
 
       - name: Deploy to App Service
         uses: azure/webapps-deploy@v2
