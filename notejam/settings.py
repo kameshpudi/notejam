@@ -14,35 +14,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-# DBHOST is only the server name, not the full URL
-hostname = os.environ['DBHOST']
-
-# Configure Postgres database; the full username is username@servername,
-# which we construct using the DBHOST value.
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['DBNAME'],
-        'HOST': hostname + ".postgres.database.azure.com",
-        'USER': os.environ['DBUSER'] + "@" + hostname,
-        'PASSWORD': os.environ['DBPASS'],
-        'OPTIONS':{
-            'sslmode': 'require'   
-        },
-    }
-}
-
-# DATABASES = {
-    # 'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': 'notejam.db',
-        # 'USER': '',
-        # 'PASSWORD': '',
-        # 'HOST': '',
-        # 'PORT': '',
-    # }
-# }
-
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
