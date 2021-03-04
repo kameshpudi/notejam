@@ -1,0 +1,33 @@
+variable "rg_name" {
+  type    = string
+  default = "NOTEJAM-DEMO-RG1"
+}
+variable "location" {
+  type    = string
+  default = "westeurope"
+}
+
+variable "db_server" {
+  type    = string
+  default = "notejamappdb"
+}
+variable "admin_login" {
+  type    = string
+  default = "sqladmin"
+}
+variable "admin_pwd" {
+  type    = string
+  default = "Microsoft2020"
+}
+variable "db_name" {
+  type    = string
+  default = "syncdb"
+}
+variable "app_plan" {
+  type    = string
+  default = "notejamappplan"
+}
+variable "app_name" {
+  type    = string
+  default = "notejamapp"
+}
