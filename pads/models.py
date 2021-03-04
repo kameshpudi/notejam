@@ -4,7 +4,12 @@ from django.db import models
 
 class Pad(models.Model):
     name = models.CharField(max_length=100)
-    user = models.ForeignKey(User, null=True, blank=True)
+    user = models.ForeignKey(
+        User,     
+        models.SET_NULL,
+        blank=True,
+        null=True,
+    )
 
     def __unicode__(self):
         return self.name
