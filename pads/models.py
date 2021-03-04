@@ -6,9 +6,7 @@ class Pad(models.Model):
     name = models.CharField(max_length=100)
     user = models.ForeignKey(
         User,     
-        models.SET_NULL,
-        blank=True,
-        null=True,
+        on_delete = models.CASCADE
     )
 
     def __unicode__(self):
