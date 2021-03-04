@@ -14,7 +14,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': "notejam",
         'HOST': "notejamappdb" + ".postgres.database.azure.com",
         'USER': "sqladmin" + "@" + "notejamappdb",
