@@ -1,10 +1,8 @@
-from .settings import *
-from pathlib import Path
 import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+ALLOWED_HOSTS = []
 
 PROJECT_DIR = "{}/../".format(os.path.dirname(__file__))
 
@@ -13,6 +11,19 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "syncdb",
+        'HOST': "notejamappdb" + ".postgres.database.azure.com",
+        'USER': "sqladmin" + "@" + "notejamappdb",
+        'PASSWORD': "Microsoft2020",
+        'OPTIONS':{
+            'sslmode': 'require'   
+        },
+    }
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

@@ -4,11 +4,7 @@ from django.db import models
 
 class Pad(models.Model):
     name = models.CharField(max_length=100)
-    user = models.ForeignKey(
-        User,     
-        on_delete = models.CASCADE,
-        limit_choices_to={'is_user': True},
-    )
+    user = models.ForeignKey(User)
 
     def __unicode__(self):
         return self.name
