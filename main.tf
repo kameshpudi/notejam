@@ -5,9 +5,9 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "NOTEJAM-DEMO-RG1"
-    storage_account_name = "kkterraformrmstate"
-    container_name       = "terraform-state"
+    resource_group_name  = "kk7-adf"
+    storage_account_name = "kk7nfadfkvread"
+    container_name       = "terraform"
     key                  = "njterraform.tfstate"
   }
 }
