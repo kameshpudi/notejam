@@ -9,7 +9,7 @@ variable "location" {
 
 variable "db_server" {
   type    = string
-  default = "notejamappdb"
+  default = "kknotejamappdb"
 }
 variable "admin_login" {
   type    = string
@@ -29,5 +29,5 @@ variable "app_plan" {
 }
 variable "app_name" {
   type    = string
-  default = "notejamapp"
+  default = "kknotejamapp"
 }
