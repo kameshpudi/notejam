@@ -2,6 +2,7 @@ variable "rg_name" {
   type    = string
   default = "NOTEJAM-DEMO-RG2"
 }
+
 variable "location" {
   type    = string
   default = "westeurope"
